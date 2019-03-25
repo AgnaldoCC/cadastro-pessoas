@@ -5,21 +5,26 @@ export function adiciona(tarefa){
     }
 }
 
-export function escreve(event, atributo){
-    type = ''
-    switch (atributo){
-        case 'name':
-            type = 'NAME_CHANGED'
-        case 'lastname':
-            type = 'LASTNAME_CHANGED'
-        case 'cpf':
-            type = 'CPF_CHANGED'
-        case 'email':
-            type = 'EMAIL_CHANGED'
-    }
-
-    return {
-        type: type,
+export function escreveNome(event){
+    return {type: 'NAME_CHANGED', 
         payload: event.target.value
-    }
+    }    
+}
+
+export function escreveSobrenome(event){
+    return {type: 'LASTNAME_CHANGED', 
+        payload: event.target.value
+    }    
+}
+
+export function escreveCpf(event){
+    return {type: 'CPF_CHANGED', 
+        payload: event.target.value
+    }    
+}
+
+export function escreveEmail(event){
+    return {type: 'EMAIL_CHANGED', 
+        payload: event.target.value
+    }    
 }
